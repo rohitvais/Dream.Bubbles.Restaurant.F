@@ -1,5 +1,6 @@
 // Centralized API client for Dream Bubbles
-const API_BASE = import.meta.env.VITE_API_URL || 'http://localhost:5000/api';
+// Uses relative /api so Vite development proxy and production hosting handle backend routing seamlessly
+const API_BASE = import.meta.env.VITE_API_URL || '/api';
 
 async function request(endpoint, options = {}) {
   const url = `${API_BASE}${endpoint}`;
