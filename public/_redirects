@@ -1,0 +1,2 @@
+/api/*  https://dream-bubbles-restaurant-b.onrender.com/api/:splat  200
+/*      /index.html                                                  200

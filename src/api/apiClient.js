@@ -1,6 +1,8 @@
 // Centralized API client for Dream Bubbles
-// Uses relative /api so Vite development proxy and production hosting handle backend routing seamlessly
-const API_BASE = import.meta.env.VITE_API_URL || '/api';
+// In development: uses relative /api to route through Vite proxy
+// In production (Cloudflare): calls live Render backend directly
+const PROD_API = 'https://dream-bubbles-restaurant-b.onrender.com/api';
+const API_BASE = import.meta.env.VITE_API_URL || (import.meta.env.DEV ? '/api' : PROD_API);
 
 async function request(endpoint, options = {}) {
   const url = `${API_BASE}${endpoint}`;
