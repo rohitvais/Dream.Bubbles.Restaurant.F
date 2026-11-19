@@ -8,7 +8,7 @@ export default defineConfig({
     proxy: {
       '/api': {
         target:
-          '',
+          'https://dream-bubbles-restaurant-b.onrender.com',
         // 'https://dream-bubbles-restaurant-b.onrender.com',
         changeOrigin: true,
       },
